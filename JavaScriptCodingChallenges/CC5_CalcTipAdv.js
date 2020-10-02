@@ -42,12 +42,12 @@ var markCalcTip = {
     }
 }
 
-function averageTip(...tips) {
+function averageTip(tips) {
     var sum = 0;
-    for (var i = 0; i < tips.length; tips++) {
-        sum += tips[i];
+    console.log(tips.length);
+    for (var i = 0; i < tips.length; i++) {
+        sum = sum + tips[i];
     }
-    console.log(sum);
     return sum / tips.length;
 }
 
@@ -58,9 +58,9 @@ markCalcTip.averageTip = averageTip(markCalcTip.tips);
 
 console.log(johnCalcTip);
 console.log(markCalcTip);
-if (johnCalcTip.averageTip > markCalcTip) {
+if (johnCalcTip.averageTip > markCalcTip.averageTip) {
     console.log('John paid more tips on average than Mark');
-} else if (johnCalcTip.averageTip < markCalcTip) {
+} else if (johnCalcTip.averageTip < markCalcTip.averageTip) {
     console.log('Mark paid more tips on average than John');
 } else {
     console.log('John and Mark paid the same amount of tip on average');
